@@ -1,0 +1,74 @@
+@import "Partials/variables";
+
+.img-beer{
+	display: block;
+    text-align: center;
+    max-width: 69px;
+	max-height: 345px;
+	margin: auto;
+	padding-top: 20px;
+	
+}
+#section-0{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/tap.jpg);
+	
+}
+#section-1{
+	margin-top: 50px;
+}
+/*#section-1,
+#section-2,
+#section-3,
+#section-4,
+#section-5,
+.hero
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+}
+#section-1{
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/section-2-background.jpg);
+}
+#section-2{
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/section-3-background.jpg);
+}
+#section-3{
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/section-4-background.jpg);
+}
+#section-4{
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/section-5-background.jpg);
+}
+#section-5{
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/section-6-background.jpg);
+}
+*/
+.hero-text{
+		position: absolute;
+		width: 1200px;
+		top: 250%;
+		/* top:30%; */
+		z-index: 2;
+		//margin: auto;
+		color: #555;
+}
+	.hero-text h1{ 
+		font-family: $head-font;
+		font-size: 64px;
+		font-weight: bold;
+	}   
+	.hero-text p{
+		font-family: $head-font;
+		font-size: 30px;
+		font-weight: bold;
+		text-align:center;
+		padding: 0 100px;
+	}

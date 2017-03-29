@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Beer Database</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	 <!-- Bootstrap CSS -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand h1" href="#" onclick="initMovieDatabase()"><img src="images/BeerTapLoggo.png" width="38" height="38" class="d-inline-block align-top" alt=""/>BeerTap</a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+     
+     <li class="nav-item">
+       <a href="#section-1" class="nav-link" onclick="showOurBeers()">BEER</a>
+       </li>
+      <li class="nav-item dropdown">
+    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="chosedMalt">CHOSE MALT</a>
+		<div class="dropdown-menu" id="beersByMalt">
+		  <a class="dropdown-item" href="#">Extra Pale</a>
+		  <a class="dropdown-item" href="#">Caramalt</a>
+		  <a class="dropdown-item" href="#">DarkCrystal</a>
+		  <a class="dropdown-item" href="#">Wheat</a>
+		  <a class="dropdown-item" href="#">Pale Crystal</a>
+		  <a class="dropdown-item" href="#">Xpale</a>
+		  <a class="dropdown-item" href="#">Crystal 150</a>
+		  <a class="dropdown-item" href="#">Pale Ale</a>
+		  <a class="dropdown-item" href="#">Munich</a>
+		  <a class="dropdown-item" href="#">Rye</a>
+		  <a class="dropdown-item" href="#">Flaked Oats</a>
+		  <a class="dropdown-item" href="#">Brown</a>
+		  <a class="dropdown-item" href="#">Chocolate</a>
+		  <a class="dropdown-item" href="#">Cane Sugar</a>
+		  <a class="dropdown-item" href="#">Amber</a>
+		  <a class="dropdown-item" href="#">Lager</a>
+		</div>
+  	  </li>
+      <li class="nav-item dropdown">
+    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="chosedHop">CHOSE HOP</a>
+		<div class="dropdown-menu" id="beersByHops">
+		  <a class="dropdown-item" href="#">Amarillo</a>
+		  <a class="dropdown-item" href="#">Adventure</a>
+		  <a class="dropdown-item" href="#">Animation</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Calypso</a>
+		  <a class="dropdown-item" href="#">Centennial</a>
+		  <a class="dropdown-item" href="#">Citra</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Calypso</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Cascade</a>
+		  <a class="dropdown-item" href="#">Challenger</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Chinook</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Columbus</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">Comet</a>
+		  <div class="dropdown-divider"></div>
+		  <a class="dropdown-item" href="#">First Gold</a>
+		  <a class="dropdown-item" href="#">Fuggles</a>
+		  <a class="dropdown-item" href="#">Galaxy</a>
+		  <a class="dropdown-item" href="#">Galena</a>
+		  <a class="dropdown-item" href="#">Golding</a>
+		  <a class="dropdown-item" href="#">Kohatu</a>
+		  <a class="dropdown-item" href="#">Lemon Drop</a>
+		  <a class="dropdown-item" href="#">Magnum</a>
+		  <a class="dropdown-item" href="#">Mosaic</a>
+		  <a class="dropdown-item" href="#">Motueka</a>
+		  <a class="dropdown-item" href="#">Saaz</a>
+		  <a class="dropdown-item" href="#">Simcoe</a>
+		  <a class="dropdown-item" href="#">Sorachi Ace</a>
+		  <a class="dropdown-item" href="#">Sovereign</a>
+		  <a class="dropdown-item" href="#">Willamette</a>
+		</div>
+  	  </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input id="serch_text" class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="collectUsersInput()">Search</button>
+    </form>
+  </div>
+</nav>
+<section id = "section-0" class="container">    	
+      	<div class="row">
+
+	      <div class="col-xs-12 col-sm-12 col-md-12 hero">
+	        
+	        <div class="hero-text container" id="hero-text">
+	            <h1 class="text-center">Beer Database</h1>
+	            <p>
+		           We love beer, and we want you to love beer too.
+	            </p>
+	        </div> 
+	      </div>
+
+   		</div>
+</section>
+<section id = "section-1" class="container">
+	<div class="row">
+		<div class="h-gutter col-md-12">
+                <h1>Beer</h1>
+        </div>
+	</div>
+	<div class="row">
+		<div clas="col-md-12 h-gutter">
+			<div class="pageCopy">
+				<div class="pageCopy">Ah, beer. A rich tapestry of tasty treats from brooding, rich dark ales through to crisp, spritzy and refreshing lagers. From traditional Belgian beer through to exciting, heavily hopped craft IPA and APA! Beer is the most widely consumed alcoholic beverage in the world, and dates back to some of the earliest known civilisations in ancient Mesopotamia (where there was even a goddess of brewing, Ninkasi) and Egypt. The earliest documented use of hops in brewing, meanwhile, dates back to Benedictine monks in 822. It would be centuries before they were widely adopted ahead of gruit (a selection of herbs) for their preservative qualities, however. Today hops are used for their flavour, which they lend to a wide variety of styles from British bitter to Czech and German Pilsner to Pale Ales from all around the world.</div>
+			</div>
+			
+		</div>
+</div>	
+</section>
+<div class="modal fade bd-example-modal-lg" id="beerDetailsModal" data-focus="true" data-backdrop="false" data-backdrop="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Beer details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+		  <div class="col-sm-4">
+			<div class="card">
+   				 <img id="beerImage" class="card-img img-beer" src="" alt="Beer image">
+  			</div>
+  			<div class="card-block">
+				<h5 id="brewers_tips" class="card-title">Brewers tips</h5>
+				<p id="tips" class="card-text"></p>
+			 </div>
+		  </div>
+		  <div class="col-sm-8">
+			<div class="card">
+			  <div class="card-block">
+				<h3 id="beerName" class="card-title"></h3>
+				<p id="story" class="card-text"></p>
+			 </div>
+			 <div class="card-block">
+				<h4 id="ingredients" class="card-title">Ingredients</h4>
+				<p id="malt" class="card-text"></p>
+				<p id="hops" class="card-text"></p>
+				<p id="yeast" class="card-text"></p>
+			 </div>
+			 <div class="card-block">
+				<h5 id="food" class="card-title">Food pairing</h5>
+				<p id="foodPairing" class="card-text"></p>
+			 </div>
+			</div>
+		  </div>
+</div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<!--<section id = "section-2" class="container">
+	<div class="row">
+		
+	</div>
+</section>
+<section id = "section-3" class="container">
+	<div class="row">
+		
+	</div>
+</section>
+<section id = "section-4" class="container">
+	<div class="row">
+		
+	</div>
+</section>
+<section id = "section-5" class="container">
+	<div class="row">
+		
+	</div>
+</section>
+<section id = "section-6" class="container">
+	<div class="row">
+		
+	</div>
+</section>-->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/main.js"></script>
+	
+	<script>
+	   $(document).ready(function(){
+    	$('[data-toggle="popover"]').popover(); 
+	   });
+	</script>
+</body>
+</html>
